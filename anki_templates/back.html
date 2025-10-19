@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back Template</title>
+</head>
+<body>
+    <div class="card back-card">
+        <!-- Your Answer Section -->
+        <div class="answer-review">
+            <div class="answer-label">Your Answer:</div>
+            <div class="answer-display">{{type:Word}}</div>
+        </div>
+
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Main Word Section -->
+        <div class="word-main-section">
+            <h1 class="word-title">{{Word}}</h1>
+            
+            <div class="word-meta">
+                <span class="type-badge">{{Type}}</span>
+            </div>
+
+            <!-- Pronunciation Section -->
+            <div class="pronunciation-section">
+                <div class="phonetic-display">
+                    <span class="phonetic-icon">🔊</span>
+                    <span class="phonetic-text">{{Phonetic}}</span>
+                </div>
+                <div class="audio-button">
+                    {{Audio}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Meanings Section -->
+        <div class="meanings-section-back">
+            <div class="meaning vietnamese">
+                <span class="meaning-icon">🇻🇳</span>
+                <div class="meaning-content">
+                    <div class="meaning-label">Vietnamese</div>
+                    <div class="meaning-text">{{Vietnamese meaning}}</div>
+                </div>
+            </div>
+            
+            <div class="meaning english">
+                <span class="meaning-icon">🇬🇧</span>
+                <div class="meaning-content">
+                    <div class="meaning-label">English</div>
+                    <div class="meaning-text">{{English meaning}}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        {{#Image}}
+        <div class="image-container-back">
+            <img src="{{Image}}" alt="Visual reference" />
+        </div>
+        {{/Image}}
+
+        <!-- Example Section -->
+        {{#Example}}
+        <div class="example-section">
+            <div class="example-title">📝 Example Usage</div>
+            <div class="example-content">
+                {{Example}}
+            </div>
+        </div>
+        {{/Example}}
+    </div>
+</body>
+</html>
