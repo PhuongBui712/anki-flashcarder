@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Template</title>
+</head>
+<body>
+    <div class="card front-card">
+        <!-- Cloze Section - Main Focus -->
+        <div class="cloze-container">
+            <div class="cloze-label">Fill in the missing word:</div>
+            <div class="cloze">
+                {{Cloze}}
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="guess-section">
+            <div class="input-wrapper">
+                {{type:Word}}
+            </div>
+        </div>
+
+        <!-- Word Type Hint -->
+        <div class="hint-section">
+            <div class="hint-item">
+                <span class="hint-icon">📚</span>
+                <span class="hint-label">Word Type:</span>
+                <span class="hint-value">{{Type}}</span>
+            </div>
+        </div>
+
+        <!-- Meanings Section -->
+        <div class="meanings-section">
+            <div class="meaning vietnamese">
+                <span class="meaning-icon">🇻🇳</span>
+                <div class="meaning-content">
+                    <span class="meaning-label">Vietnamese</span>
+                    <span class="meaning-text">{{Vietnamese meaning}}</span>
+                </div>
+            </div>
+            
+            <div class="meaning english">
+                <span class="meaning-icon">🇬🇧</span>
+                <div class="meaning-content">
+                    <span class="meaning-label">English</span>
+                    <span class="meaning-text">{{English meaning}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        {{#Image}}
+        <div class="image-container">
+            <img src="{{Image}}" alt="Visual reference" />
+        </div>
+        {{/Image}}
+
+        <!-- Footer Instruction -->
+        <div class="footer-hint">💡 Type the word and press ENTER to check your answer</div>
+    </div>
+</body>
+</html>
