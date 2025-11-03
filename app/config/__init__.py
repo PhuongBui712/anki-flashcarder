@@ -1,4 +1,4 @@
-from .settings import settings, ensure_directories
+from .settings import get_settings, ensure_directories
 
 
-__all__ = ["settings", "ensure_directories"]
+__all__ = ["get_settings", "ensure_directories"]
